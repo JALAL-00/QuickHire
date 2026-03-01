@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const CallToAction = () => {
   return (
-    <section className="pt-8 md:pt-10 pb-16 bg-white">
+    <section className="pt-8 md:pt-10 pb-8 md:pb-10 bg-white">
       <div className="container mx-auto px-6">
         <div className="bg-primary rounded-none md:rounded-lg overflow-hidden relative flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-12 md:py-0 min-h-[400px]">
           

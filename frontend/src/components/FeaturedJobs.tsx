@@ -15,7 +15,7 @@ const featuredJobs = [
 
 const FeaturedJobs = () => {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="pt-8 md:pt-10 pb-16 md:pb-24 bg-white">
       <div className="container mx-auto px-6">
         
         {/* Header */}
