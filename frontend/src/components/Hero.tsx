@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative w-full bg-light pt-16 pb-0 overflow-hidden min-h-[700px]">
 
       {/* Background Geometric Pattern - Top Right */}
-      <div className="absolute top-0 right-0 w-[55%] h-full pointer-events-none z-0">
+      <div className="absolute top-0 right-0 w-[65%] h-full pointer-events-none z-0">
         {/* Actual pattern image if available */}
         <div className="absolute inset-0">
           <Image
