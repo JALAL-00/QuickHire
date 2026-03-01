@@ -83,12 +83,6 @@ const AdminDashboard = () => {
         <div className="flex justify-between items-center mb-10">
           <div>
             <h1 className="text-3xl font-bold text-dark">Admin Dashboard</h1>
-            <button 
-              onClick={() => { localStorage.removeItem("admin_auth"); setIsAuthorized(false); }}
-              className="text-xs text-red-500 font-bold hover:underline"
-            >
-              Logout
-            </button>
           </div>
           <Link href="/admin/create" className="bg-primary hover:bg-primary-hover text-white font-bold px-6 py-3 flex items-center gap-2">
             <Plus size={20} /> Post a New Job
