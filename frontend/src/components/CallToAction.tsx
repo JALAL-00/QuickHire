@@ -26,7 +26,6 @@ const CallToAction = () => {
 
           {/* Right Image */}
           <div className="flex-1 relative w-full h-[300px] md:h-[450px] mt-8 md:mt-0">
-            {/* The image is positioned to stick to the bottom right */}
             <div className="absolute right-0 bottom-0 w-full h-full md:w-[120%] md:h-[110%] md:-right-10 md:-bottom-10">
               <Image
                 src="/assets/dashboard.png"
@@ -37,7 +36,6 @@ const CallToAction = () => {
             </div>
           </div>
 
-          {/* Background Decorative Element (Optional Circles) */}
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
           <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
 

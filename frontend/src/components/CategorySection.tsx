@@ -38,7 +38,7 @@ const CategorySection = () => {
     <section className="pt-16 md:pt-24 pb-8 md:pb-10 bg-white"> 
       <div className="container mx-auto px-6">
         
-        {/* --- PART 1: COMPANIES LOGOS --- */}
+        {/* --- COMPANIES LOGOS --- */}
         <div className="mb-24">
             <p className="text-muted text-lg mb-8 font-medium">
             Companies we helped grow
@@ -58,7 +58,7 @@ const CategorySection = () => {
             </div>
         </div>
 
-        {/* --- PART 2: CATEGORIES HEADER --- */}
+        {/* --- CATEGORIES HEADER --- */}
         <div className="flex justify-between items-end mb-12">
           <h2 className="text-4xl md:text-[48px] font-bold text-dark leading-tight">
             Explore by <span className="text-accent">category</span>
@@ -71,7 +71,7 @@ const CategorySection = () => {
           </Link>
         </div>
 
-        {/* --- PART 3: CATEGORIES GRID --- */}
+        {/* --- CATEGORIES GRID --- */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((cat, index) => (
             <Link 

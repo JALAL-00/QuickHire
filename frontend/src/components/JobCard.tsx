@@ -20,7 +20,6 @@ const JobCard = ({ id, title, company, location, type, categories }: JobCardProp
         {/* Top: Logo & Type Badge */}
         <div className="flex justify-between items-start mb-6">
           <div className="w-12 h-12 bg-gray-50 border border-gray-100 flex items-center justify-center p-2">
-            {/* Placeholder for Logo - In a real app we'd use company logo URL */}
             <Briefcase className="text-primary w-full h-full" />
           </div>
           <span className="px-3 py-1 border border-primary text-primary text-xs font-bold uppercase tracking-wider">

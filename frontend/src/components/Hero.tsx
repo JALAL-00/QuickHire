@@ -7,7 +7,6 @@ const Hero = () => {
 
       {/* Background Geometric Pattern - Top Right */}
       <div className="absolute top-0 right-0 w-[65%] h-full pointer-events-none z-0">
-        {/* Actual pattern image if available */}
         <div className="absolute inset-0">
           <Image
             src="/assets/pattern.png"
@@ -29,7 +28,6 @@ const Hero = () => {
             more than <br />
             <span className="text-accent relative inline-block">
               5000+ Jobs
-              {/* Hand-drawn scribble underline - matches the double-stroke style in Figma */}
               <svg
                 className="absolute -bottom-5 left-0 w-full"
                 viewBox="0 0 380 28"
@@ -43,7 +41,6 @@ const Hero = () => {
                   strokeWidth="4.5"
                   strokeLinecap="round"
                 />
-                {/* Second stroke - slight offset below for double-line effect */}
                 <path
                   d="M3 23C55 14 145 9 275 20C308 23 340 24 377 22"
                   stroke="#26A4FF"

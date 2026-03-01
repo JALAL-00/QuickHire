@@ -7,10 +7,9 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
           
-          {/* Col 1: Brand (Using Navbar Logo Style) */}
+          {/* Col 1: Brand */}
           <div className="lg:col-span-4">
             <Link href="/" className="flex items-center gap-2 mb-8">
-              {/* EXACT LOGO FROM NAVBAR */}
               <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="11" cy="11" r="8"></circle>
