@@ -4,7 +4,9 @@ import Job from '../models/Job';
 
 export const getJobs = async (req: Request, res: Response): Promise<void> => {
   try {
-    const { search, category, location } = req.query;
+    const search = req.query.search as string;
+    const category = req.query.category as string;
+    const location = req.query.location as string;
     
     let query: any = {};
 

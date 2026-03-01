@@ -1,8 +1,9 @@
 import { Router } from 'express';
-import { createApplication } from '../controllers/applicationController';
+import { getJobs, getJobById, createJob, deleteJob } from '../controllers/jobController';
 
 const router = Router();
 
-router.route('/').post(createApplication);
+router.route('/').get(getJobs).post(createJob);
+router.route('/:id').get(getJobById).delete(deleteJob);
 
 export default router;
