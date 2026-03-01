@@ -1,7 +1,23 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { Search, MapPin, ChevronDown } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const router = useRouter();
+  const [keyword, setKeyword] = useState("");
+  const [location, setLocation] = useState("Florence, Italy");
+
+  const handleSearch = () => {
+    const params = new URLSearchParams();
+    if (keyword) params.append("search", keyword);
+    if (location) params.append("location", location);
+    
+    router.push(`/jobs?${params.toString()}`);
+  };
+
   return (
     <section className="relative w-full bg-light pt-16 pb-0 overflow-hidden min-h-[700px]">
 
@@ -28,13 +44,13 @@ const Hero = () => {
             more than <br />
             <span className="text-accent relative inline-block">
               5000+ Jobs
+              {/* Hand-drawn scribble underline */}
               <svg
                 className="absolute -bottom-5 left-0 w-full"
                 viewBox="0 0 380 28"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                {/* First stroke - main wave */}
                 <path
                   d="M3 18C60 8 150 2 280 14C310 17 340 19 377 16"
                   stroke="#26A4FF"
@@ -68,6 +84,9 @@ const Hero = () => {
                   <input
                     type="text"
                     placeholder="Job title or keyword"
+                    value={keyword}
+                    onChange={(e) => setKeyword(e.target.value)}
+                    onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
                     className="w-full outline-none text-dark placeholder-[#A8ADB7] font-medium text-[15px] bg-transparent"
                   />
                 </div>
@@ -79,11 +98,15 @@ const Hero = () => {
               <div className="flex items-center gap-3 h-full">
                 <MapPin className="text-dark w-5 h-5 shrink-0" strokeWidth={2.2} />
                 <div className="relative w-full flex items-center">
-                  <select className="w-full outline-none text-dark font-medium bg-transparent cursor-pointer appearance-none text-[15px] pr-6">
-                    <option>Florence, Italy</option>
-                    <option>London, UK</option>
-                    <option>New York, USA</option>
-                    <option>Berlin, Germany</option>
+                  <select 
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                    className="w-full outline-none text-dark font-medium bg-transparent cursor-pointer appearance-none text-[15px] pr-6"
+                  >
+                    <option value="Florence, Italy">Florence, Italy</option>
+                    <option value="London, UK">London, UK</option>
+                    <option value="New York, USA">New York, USA</option>
+                    <option value="Berlin, Germany">Berlin, Germany</option>
                   </select>
                   <ChevronDown className="absolute right-0 w-4 h-4 text-dark pointer-events-none" strokeWidth={2.2} />
                 </div>
@@ -91,7 +114,10 @@ const Hero = () => {
             </div>
 
             {/* Search Button */}
-            <button className="bg-primary hover:bg-primary-hover text-white font-bold text-[15px] px-8 py-4 transition-all duration-200 whitespace-nowrap shrink-0">
+            <button 
+              onClick={handleSearch}
+              className="bg-primary hover:bg-primary-hover text-white font-bold text-[15px] px-8 py-4 transition-all duration-200 whitespace-nowrap shrink-0"
+            >
               Search my job
             </button>
           </div>
@@ -100,7 +126,11 @@ const Hero = () => {
           <div className="mt-6 text-sm text-dark font-medium flex items-center gap-1 flex-wrap">
             <span className="text-muted font-normal">Popular :</span>
             {["UI Designer", "UX Researcher", "Android", "Admin"].map((tag, i, arr) => (
-              <span key={tag} className="cursor-pointer hover:text-primary transition-colors">
+              <span 
+                key={tag} 
+                onClick={() => router.push(`/jobs?search=${tag}`)}
+                className="cursor-pointer hover:text-primary transition-colors"
+              >
                 {tag}{i < arr.length - 1 ? "," : ""}
               </span>
             ))}
