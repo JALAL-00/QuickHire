@@ -3,103 +3,124 @@ import { Search, MapPin, ChevronDown } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative w-full bg-light pt-12 pb-24 overflow-hidden min-h-[650px]">
-      
-      {/* BACKGROUND PATTERN (Top Right) */}
-      <div className="absolute top-0 right-0 w-[56%] h-full pointer-events-none z-0 hidden lg:block">
-        <Image 
-            src="/assets/pattern.png" 
-            alt="pattern" 
+    <section className="relative w-full bg-light pt-16 pb-0 overflow-hidden min-h-[700px]">
+
+      {/* Background Geometric Pattern - Top Right */}
+      <div className="absolute top-0 right-0 w-[55%] h-full pointer-events-none z-0">
+        {/* Actual pattern image if available */}
+        <div className="absolute inset-0">
+          <Image
+            src="/assets/pattern.png"
+            alt="pattern"
             fill
-            className="object-contain object-right-top opacity-100"
-        />
+            className="object-cover object-left-top"
+          />
+        </div>
       </div>
 
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-10 relative z-10 items-center">
-        
-        {/* LEFT COLUMN: Text & Search */}
-        <div className="max-w-xl">
-          <h1 className="text-[56px] lg:text-[76px] font-bold text-dark leading-[1.1] mb-6 tracking-tight">
+      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-8 relative z-10">
+
+        {/* LEFT COLUMN */}
+        <div className="pt-12 lg:pt-16 pb-24 max-w-[600px]">
+
+          {/* Main Heading */}
+          <h1 className="text-[56px] lg:text-[72px] font-extrabold text-dark leading-[1.05] tracking-tight mb-8">
             Discover <br />
             more than <br />
             <span className="text-accent relative inline-block">
               5000+ Jobs
-              {/* Blue Marker Scribble */}
+              {/* Hand-drawn scribble underline - matches the double-stroke style in Figma */}
               <svg
-                className="absolute -bottom-3 left-0 w-full h-4 text-accent"
-                viewBox="0 0 200 9"
+                className="absolute -bottom-5 left-0 w-full"
+                viewBox="0 0 380 28"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
+                {/* First stroke - main wave */}
                 <path
-                  d="M2.00025 6.99997C25.7501 2.67594 72.5 -1.00003 198 4.49997"
-                  stroke="currentColor"
-                  strokeWidth="4" // Thicker stroke
+                  d="M3 18C60 8 150 2 280 14C310 17 340 19 377 16"
+                  stroke="#26A4FF"
+                  strokeWidth="4.5"
                   strokeLinecap="round"
+                />
+                {/* Second stroke - slight offset below for double-line effect */}
+                <path
+                  d="M3 23C55 14 145 9 275 20C308 23 340 24 377 22"
+                  stroke="#26A4FF"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  opacity="0.7"
                 />
               </svg>
             </span>
           </h1>
 
-          <p className="text-muted text-lg mb-10 leading-relaxed">
+          {/* Subtitle */}
+          <p className="text-muted text-lg font-normal mb-12 leading-relaxed max-w-[460px]">
             Great platform for the job seeker that searching for new career heights and passionate about startups.
           </p>
 
-          {/* SEARCH BAR (White Box Container) */}
-          <div className="bg-white p-2 shadow-search flex flex-col md:flex-row items-center">
-            
-            {/* Input 1: Keyword */}
-            <div className="flex items-center flex-1 px-4 py-3 w-full">
-                <Search className="text-dark w-5 h-5 mr-3 shrink-0" />
-                <input 
-                    type="text" 
-                    placeholder="Job title or keyword" 
-                    className="w-full outline-none text-dark placeholder-muted font-medium bg-transparent"
-                />
+          {/* Search Bar */}
+          <div className="bg-white shadow-[0_16px_48px_rgba(0,0,0,0.08)] flex flex-col md:flex-row items-stretch max-w-[680px]">
+
+            {/* Keyword Input */}
+            <div className="flex-1 px-5 py-4 border-b md:border-b-0 md:border-r border-gray-200">
+              <div className="flex items-center gap-3 h-full">
+                <Search className="text-dark w-5 h-5 shrink-0" strokeWidth={2.2} />
+                <div className="flex flex-col w-full">
+                  <input
+                    type="text"
+                    placeholder="Job title or keyword"
+                    className="w-full outline-none text-dark placeholder-[#A8ADB7] font-medium text-[15px] bg-transparent"
+                  />
+                </div>
+              </div>
             </div>
 
-            {/* Vertical Divider */}
-            <div className="hidden md:block w-[1px] h-8 bg-gray-200 mx-2"></div>
-            <div className="md:hidden w-full h-[1px] bg-gray-200 my-2"></div>
-
-            {/* Input 2: Location */}
-            <div className="flex items-center flex-1 px-4 py-3 w-full relative">
-                <MapPin className="text-dark w-5 h-5 mr-3 shrink-0" />
-                <div className="w-full relative">
-                    <select className="w-full outline-none text-dark font-medium bg-transparent cursor-pointer appearance-none z-10 relative">
-                        <option>Florence, Italy</option>
-                        <option>London, UK</option>
-                        <option>New York, USA</option>
-                    </select>
+            {/* Location Selector */}
+            <div className="flex-1 px-5 py-4 border-b md:border-b-0 border-gray-200">
+              <div className="flex items-center gap-3 h-full">
+                <MapPin className="text-dark w-5 h-5 shrink-0" strokeWidth={2.2} />
+                <div className="relative w-full flex items-center">
+                  <select className="w-full outline-none text-dark font-medium bg-transparent cursor-pointer appearance-none text-[15px] pr-6">
+                    <option>Florence, Italy</option>
+                    <option>London, UK</option>
+                    <option>New York, USA</option>
+                    <option>Berlin, Germany</option>
+                  </select>
+                  <ChevronDown className="absolute right-0 w-4 h-4 text-dark pointer-events-none" strokeWidth={2.2} />
                 </div>
-                <ChevronDown className="w-4 h-4 text-muted absolute right-4 pointer-events-none" />
+              </div>
             </div>
 
             {/* Search Button */}
-            <button className="w-full md:w-auto bg-primary hover:bg-primary-hover text-white font-bold px-8 py-3 transition-colors">
+            <button className="bg-primary hover:bg-primary-hover text-white font-bold text-[15px] px-8 py-4 transition-all duration-200 whitespace-nowrap shrink-0">
               Search my job
             </button>
           </div>
 
-          {/* POPULAR TAGS */}
-          <div className="mt-6 text-sm">
-            <span className="text-dark font-medium mr-2">Popular :</span>
-            <span className="text-muted">UI Designer, UX Researcher, Android, Admin</span>
+          {/* Popular Tags */}
+          <div className="mt-6 text-sm text-dark font-medium flex items-center gap-1 flex-wrap">
+            <span className="text-muted font-normal">Popular :</span>
+            {["UI Designer", "UX Researcher", "Android", "Admin"].map((tag, i, arr) => (
+              <span key={tag} className="cursor-pointer hover:text-primary transition-colors">
+                {tag}{i < arr.length - 1 ? "," : ""}
+              </span>
+            ))}
           </div>
         </div>
 
-        {/* RIGHT COLUMN: Man Image */}
-        <div className="relative h-[600px] w-full hidden lg:block">
-            <div className="absolute bottom-0 right-0 w-[450px]">
-                <Image 
-                    src="/assets/man.png" 
-                    alt="Happy Job Seeker" 
-                    width={600} 
-                    height={800} 
-                    className="object-contain"
-                    priority
-                />
-            </div>
+        {/* RIGHT COLUMN - Man Image */}
+        <div className="hidden lg:flex items-end justify-center relative">
+          <div className="relative w-[580px] h-[660px]">
+            <Image
+              src="/assets/man.png"
+              alt="Job Seeker"
+              fill
+              className="object-contain object-bottom"
+              priority
+            />
+          </div>
         </div>
 
       </div>
