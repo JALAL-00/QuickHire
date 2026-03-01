@@ -18,7 +18,7 @@ const FindJobsPage = () => {
       if (search) query.append("search", search);
       if (category) query.append("category", category);
 
-      const response = await fetch(`http://localhost:5000/api/jobs?${query.toString()}`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/jobs?${query.toString()}`);
       const result = await response.json();
       
       if (result.success) {
