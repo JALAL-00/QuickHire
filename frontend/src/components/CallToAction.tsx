@@ -17,7 +17,7 @@ const CallToAction = () => {
               Start posting jobs for only $10.
             </p>
             <Link 
-              href="/admin" 
+              href="/" 
               className="inline-block bg-white text-primary font-bold text-lg px-8 py-3.5 hover:bg-gray-100 transition-colors shadow-lg"
             >
               Sign Up For Free

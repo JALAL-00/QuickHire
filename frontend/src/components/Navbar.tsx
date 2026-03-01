@@ -34,13 +34,13 @@ const Navbar = () => {
         {/* Right: Auth Buttons */}
         <div className="flex items-center gap-4">
           <Link 
-            href="/login" 
+            href="/admin" 
             className="hidden md:block text-primary font-bold hover:underline"
           >
             Login
           </Link>
           <Link 
-            href="/signup" 
+            href="" 
             className="px-6 py-3 bg-primary text-white font-bold rounded-none hover:bg-primary-hover transition-all"
           >
             Sign Up
