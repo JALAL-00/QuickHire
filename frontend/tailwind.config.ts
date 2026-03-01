@@ -10,20 +10,22 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#4F46E5",
-          hover: "#4338CA",
-          light: "#E0E7FF",
+          DEFAULT: "#4640DE", // The exact deep purple
+          hover: "#3B36DB",
         },
         accent: {
-          DEFAULT: "#0EA5E9",
+          DEFAULT: "#26A4FF", // The exact cyan blue
         },
-        dark: "#111827",
-        muted: "#6B7280",
-        light: "#F9FAFB",
+        dark: "#25324B",      // Navy black text
+        muted: "#515B6F",     // Gray text
+        light: "#F8F8FD",     // Background tint
       },
       fontFamily: {
         sans: ['var(--font-inter)'],
       },
+      boxShadow: {
+        'search': '0px 24px 48px -12px rgba(0, 0, 0, 0.04)', // Soft shadow for search bar
+      }
     },
   },
   plugins: [],
