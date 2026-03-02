@@ -7,7 +7,7 @@ This project was built as a technical assessment, strictly following a provided 
 ---
 
 ## Live Demo & Video
-- **Loom Demo (Video Walkthrough):** [https://www.loom.com/share/ecce175b04e64eb0b6bf8331b4959773?t=259](https://www.loom.com/share/ecce175b04e64eb0b6bf8331b4959773?t=259)
+- **Loom Demo (Video Walkthrough):** [https://www.loom.com/share/2601f4a5d8f74907b44b8c2358ddc5fd](https://www.loom.com/share/2601f4a5d8f74907b44b8c2358ddc5fd)
 - **Live Deployment:** [https://quick-hire-theta.vercel.app/](https://quick-hire-theta.vercel.app/)
 
 ---
