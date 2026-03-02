@@ -9,28 +9,7 @@ This project was built as a technical assessment, strictly following a provided 
 ## 🚀 Live Demo & Video
 - **GitHub Repository:** [https://github.com/JALAL-00/QuickHire.git](https://github.com/JALAL-00/QuickHire.git)
 - **Loom Demo (Video Walkthrough):** [Insert your Loom link here]
-- **Live Deployment:** [Insert live link if deployed, otherwise state "Local Only"]
-
----
-
-# Key Features
-
-The application is built to provide a seamless "Quick Hire" experience for both candidates and employers:
-
-### **User Functionality**
-- **Job Discovery:** Search through listings via keywords or filter by specific industries (Design, Marketing, Engineering, etc.).
-- **Dynamic Browsing:** Responsive job cards featuring company details, location, and colorful category tags.
-- **Detailed View:** Full job descriptions and requirements fetched directly from the database.
-- **Application System:** A functional "Apply Now" form with client-side and server-side validation for emails and resume URLs.
-- **Brand Consistency:** Pixel-perfect UI matching the Figma template using a custom Tailwind color palette.
-
-### **Admin Functionality**
-- **Protected Access:** A secure login shield prevents unauthorized access to management tools.
-- **Job Management Dashboard:**
-  - **Create:** Post new job opportunities through a comprehensive form.
-  - **Read:** Monitor all active listings in a clean, tabular layout.
-  - **Delete:** Remove outdated or filled positions instantly from the database.
-- **Real-time Synchronization:** Changes made in the Admin panel reflect instantly on the public landing page.
+- **Live Deployment:** [https://quick-hire-theta.vercel.app/](https://quick-hire-theta.vercel.app/)
 
 ---
 
@@ -131,6 +110,40 @@ This project uses the MERN stack with a strong emphasis on Type Safety and Modul
 - **Database:** **MongoDB** with **Mongoose ODM**
 - **Validation:** Regex-based Email and URL validation
 - **Middleware:** CORS, Express JSON Parser
+
+---
+
+# Key Features
+
+The application is built to provide a seamless "Quick Hire" experience for both candidates and employers:
+
+### **User Functionality**
+- **Job Discovery:** Search through listings via keywords or filter by specific industries (Design, Marketing, Engineering, etc.).
+- **Dynamic Browsing:** Responsive job cards featuring company details, location, and colorful category tags.
+- **Detailed View:** Full job descriptions and requirements fetched directly from the database.
+- **Application System:** A functional "Apply Now" form with client-side and server-side validation for emails and resume URLs.
+- **Brand Consistency:** Pixel-perfect UI matching the Figma template using a custom Tailwind color palette.
+
+### **Admin Functionality**
+- **Protected Access:** A secure login shield prevents unauthorized access to management tools.
+- **Job Management Dashboard:**
+  - **Create:** Post new job opportunities through a comprehensive form.
+  - **Read:** Monitor all active listings in a clean, tabular layout.
+  - **Delete:** Remove outdated or filled positions instantly from the database.
+- **Real-time Synchronization:** Changes made in the Admin panel reflect instantly on the public landing page.
+
+---
+
+## 🧪 API Endpoints
+
+### Jobs
+- **GET** `/api/jobs` - List all jobs (supports `?search=` and `?category=` filtering)
+- **GET** `/api/jobs/:id` - Get single job details
+- **POST** `/api/jobs` - Create a new job listing (Admin access)
+- **DELETE** `/api/jobs/:id` - Remove a job listing (Admin access)
+
+### Applications
+- **POST** `/api/applications` - Submit a new job application (Requires name, email, resumeLink)
 
 ---
 

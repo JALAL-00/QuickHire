@@ -12,7 +12,13 @@ connectDB();
 
 const app: Application = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    'https://quick-hire-theta.vercel.app'
+  ]
+}));
 app.use(express.json());
 
 app.use('/api/jobs', jobRoutes);
