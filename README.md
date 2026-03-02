@@ -6,9 +6,8 @@ This project was built as a technical assessment, strictly following a provided 
 
 ---
 
-## 🚀 Live Demo & Video
-- **GitHub Repository:** [https://github.com/JALAL-00/QuickHire.git](https://github.com/JALAL-00/QuickHire.git)
-- **Loom Demo (Video Walkthrough):** [Insert your Loom link here]
+## Live Demo & Video
+- **Loom Demo (Video Walkthrough):** [https://www.loom.com/share/ecce175b04e64eb0b6bf8331b4959773?t=259](https://www.loom.com/share/ecce175b04e64eb0b6bf8331b4959773?t=259)
 - **Live Deployment:** [https://quick-hire-theta.vercel.app/](https://quick-hire-theta.vercel.app/)
 
 ---
@@ -98,13 +97,13 @@ _Note: Once logged in, the Navbar will dynamically update to show "Dashboard" an
 
 This project uses the MERN stack with a strong emphasis on Type Safety and Modular Architecture.
 
-### 🖥️ Frontend
+### Frontend
 - **Framework:** **Next.js 15** (App Router)
 - **Language:** **TypeScript**
 - **Styling:** **Tailwind CSS v3** (Custom Figma Config)
 - **Icons:** **Lucide React**
 
-### 🗄️ Backend
+### Backend
 - **Framework:** **Node.js** with **Express.js**
 - **Language:** **TypeScript**
 - **Database:** **MongoDB** with **Mongoose ODM**
@@ -134,7 +133,7 @@ The application is built to provide a seamless "Quick Hire" experience for both 
 
 ---
 
-## 🧪 API Endpoints
+## API Endpoints
 
 ### Jobs
 - **GET** `/api/jobs` - List all jobs (supports `?search=` and `?category=` filtering)
@@ -147,6 +146,6 @@ The application is built to provide a seamless "Quick Hire" experience for both 
 
 ---
 
-## 👨‍💻 Author
+## Author
 **[Jalal Uddin]**
 *Associate Software Engineer Applicant*
